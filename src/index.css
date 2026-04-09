@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-black: #000000;
+  --color-brand-charcoal: #1a1a1a;
+  --color-brand-lime: #c8ff00;
+  --color-brand-coral: #ff4d6d;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-white font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold uppercase tracking-tighter;
+  }
+}
+
+@layer components {
+  .brutal-border {
+    @apply border border-white/20;
+  }
+
+  .brutal-btn {
+    @apply px-6 py-3 border border-white uppercase font-mono text-sm transition-all duration-200 hover:bg-white hover:text-black active:scale-95;
+  }
+
+  .brutal-btn-accent {
+    @apply px-6 py-3 border border-brand-lime bg-brand-lime text-black uppercase font-mono text-sm transition-all duration-200 hover:bg-black hover:text-brand-lime active:scale-95;
+  }
+
+  .sharp-card {
+    @apply border border-white/10 bg-brand-charcoal transition-all duration-300 hover:border-brand-lime;
+  }
+}
