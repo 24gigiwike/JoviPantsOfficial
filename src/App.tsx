@@ -35,11 +35,11 @@ import { useState, useRef } from "react";
 import React from "react";
 
 const CATEGORIES = [
-  { id: 'men', name: "Men's", image: "https://picsum.photos/seed/jovi-men/800/1000" },
-  { id: 'women', name: "Women's", image: "https://picsum.photos/seed/jovi-women/800/1000" },
-  { id: 'cargo', name: "Cargo", image: "https://picsum.photos/seed/jovi-cargo/800/1000" },
-  { id: 'tailored', name: "Tailored", image: "https://picsum.photos/seed/jovi-tailored/800/1000" },
-  { id: 'streetwear', name: "Streetwear", image: "https://picsum.photos/seed/jovi-street/800/1000" },
+  { id: 'men', name: "Men's", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422976/IMG_0428_ckygjo.jpg" },
+  { id: 'women', name: "Women's", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422968/IMG_0176_vbj9db.jpg" },
+  { id: 'cargo', name: "Cargo", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422980/IMG_0594_xvkxub.jpg" },
+  { id: 'tailored', name: "Tailored", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422982/IMG_0624_mvibh3.jpg" },
+  { id: 'streetwear', name: "Streetwear", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422983/IMG_9336_phgzng.jpg" },
 ];
 
 const BEST_SELLERS = [
@@ -47,28 +47,28 @@ const BEST_SELLERS = [
     id: 1, 
     name: "Classic Cargo V1", 
     price: "₦25,000", 
-    image: "https://picsum.photos/seed/pants1/600/800",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422974/IMG_0301_mb6mbj.jpg",
     tag: "Best Seller"
   },
   { 
     id: 2, 
     name: "Urban Street Joggers", 
     price: "₦18,500", 
-    image: "https://picsum.photos/seed/pants2/600/800",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422970/IMG_0199_hqto58.jpg",
     tag: "Trending"
   },
   { 
     id: 3, 
     name: "Tailored Slim Trousers", 
     price: "₦30,000", 
-    image: "https://picsum.photos/seed/pants3/600/800",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422970/IMG_0185_g9dozz.jpg",
     tag: "Premium"
   },
   { 
     id: 4, 
     name: "Utility Combat Pants", 
     price: "₦22,000", 
-    image: "https://picsum.photos/seed/pants4/600/800",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422968/IMG_0181_kzddsu.jpg",
     tag: "Most Affordable"
   },
 ];
