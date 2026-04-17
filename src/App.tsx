@@ -47,28 +47,28 @@ const BEST_SELLERS = [
     id: 1, 
     name: "Classic Cargo V1", 
     price: "₦25,000", 
-    image: "https://picsum.photos/seed/pants1/600/800",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422974/IMG_0301_mb6mbj.jpg",
     tag: "Best Seller"
   },
   { 
     id: 2, 
     name: "Urban Street Joggers", 
     price: "₦18,500", 
-    image: "https://picsum.photos/seed/pants2/600/800",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422970/IMG_0199_hqto58.jpg",
     tag: "Trending"
   },
   { 
     id: 3, 
     name: "Tailored Slim Trousers", 
     price: "₦30,000", 
-    image: "https://picsum.photos/seed/pants3/600/800",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422970/IMG_0185_g9dozz.jpg",
     tag: "Premium"
   },
   { 
     id: 4, 
     name: "Utility Combat Pants", 
     price: "₦22,000", 
-    image: "https://picsum.photos/seed/pants4/600/800",
+    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422968/IMG_0181_kzddsu.jpg",
     tag: "Most Affordable"
   },
 ];
