@@ -35,11 +35,11 @@ import { useState, useRef } from "react";
 import React from "react";
 
 const CATEGORIES = [
-  { id: 'men', name: "Men's", image: "https://picsum.photos/seed/jovi-men/800/1000" },
-  { id: 'women', name: "Women's", image: "https://picsum.photos/seed/jovi-women/800/1000" },
-  { id: 'cargo', name: "Cargo", image: "https://picsum.photos/seed/jovi-cargo/800/1000" },
-  { id: 'tailored', name: "Tailored", image: "https://picsum.photos/seed/jovi-tailored/800/1000" },
-  { id: 'streetwear', name: "Streetwear", image: "https://picsum.photos/seed/jovi-street/800/1000" },
+  { id: 'men', name: "Men's", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422976/IMG_0428_ckygjo.jpg" },
+  { id: 'women', name: "Women's", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422968/IMG_0176_vbj9db.jpg" },
+  { id: 'cargo', name: "Cargo", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422980/IMG_0594_xvkxub.jpg" },
+  { id: 'tailored', name: "Tailored", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422982/IMG_0624_mvibh3.jpg" },
+  { id: 'streetwear', name: "Streetwear", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422983/IMG_9336_phgzng.jpg" },
 ];
 
 const BEST_SELLERS = [
