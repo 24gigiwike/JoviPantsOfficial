@@ -111,15 +111,15 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
             <a href="#categories" className="hover:text-brand-lime transition-colors">Categories</a>
-            <a href="#best-sellers" className="hover:text-brand-lime transition-colors">Visit Store</a>
+            <a href="https://wa.me/message/76WRB4GCOB4JC1" target="_blank" rel="noreferrer" className="hover:text-brand-lime transition-colors">Visit Store</a>
             <a href="#about" className="hover:text-brand-lime transition-colors">About</a>
             <a href="#contact" className="hover:text-brand-lime transition-colors">Contact</a>
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="brutal-btn-accent hidden sm:block">
+            <a href="https://wa.me/message/76WRB4GCOB4JC1" target="_blank" rel="noreferrer" className="brutal-btn-accent hidden sm:block">
               Visit Store
-            </button>
+            </a>
             <button 
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -137,10 +137,10 @@ export default function App() {
             className="absolute top-20 left-0 w-full bg-brand-charcoal border-b border-white/10 p-6 flex flex-col gap-6 md:hidden"
           >
             <a href="#categories" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">Categories</a>
-            <a href="#best-sellers" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">Visit Store</a>
+            <a href="https://wa.me/message/76WRB4GCOB4JC1" target="_blank" rel="noreferrer" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">Visit Store</a>
             <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">About</a>
             <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">Contact</a>
-            <button className="brutal-btn-accent w-full">Visit Store</button>
+            <a href="https://wa.me/message/76WRB4GCOB4JC1" target="_blank" rel="noreferrer" className="brutal-btn-accent w-full text-center">Visit Store</a>
           </motion.div>
         )}
       </nav>
@@ -175,9 +175,9 @@ export default function App() {
               Premium quality without the premium price tag.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="brutal-btn-accent px-10 py-5 text-lg">
+              <a href="https://wa.me/message/76WRB4GCOB4JC1" target="_blank" rel="noreferrer" className="brutal-btn-accent px-10 py-5 text-lg">
                 Visit Store
-              </button>
+              </a>
               <button className="brutal-btn px-10 py-5 text-lg">
                 Elevate Wardrobe
               </button>
@@ -357,7 +357,7 @@ export default function App() {
                     {product.tag}
                   </div>
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
-                    <button className="brutal-btn-accent w-full">Quick Add</button>
+                    <a href="https://wa.me/message/76WRB4GCOB4JC1" target="_blank" rel="noreferrer" className="brutal-btn-accent w-full text-center uppercase font-bold">Visit Store</a>
                   </div>
                 </div>
                 <div className="p-6 border-t border-white/10">
