@@ -16,9 +16,23 @@ import {
   Menu,
   X,
   Phone,
-  Mail
+  Mail,
+  Music2
 } from "lucide-react";
+
+const TikTokIcon = ({ size = 20 }: { size?: number }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1 .05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
+  </svg>
+);
 import { useState, useRef } from "react";
+import React from "react";
 
 const CATEGORIES = [
   { id: 'men', name: "Men's", image: "https://picsum.photos/seed/jovi-men/800/1000" },
@@ -61,7 +75,20 @@ const BEST_SELLERS = [
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const targetRef = useRef(null);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleInquirySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Jovi Pants Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    window.location.href = `mailto:edetjoshua92@gmail.com?subject=${subject}&body=${body}`;
+  };
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start start", "end start"]
@@ -84,14 +111,14 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
             <a href="#categories" className="hover:text-brand-lime transition-colors">Categories</a>
-            <a href="#best-sellers" className="hover:text-brand-lime transition-colors">Shop</a>
+            <a href="#best-sellers" className="hover:text-brand-lime transition-colors">Visit Store</a>
             <a href="#about" className="hover:text-brand-lime transition-colors">About</a>
             <a href="#contact" className="hover:text-brand-lime transition-colors">Contact</a>
           </div>
 
           <div className="flex items-center gap-4">
             <button className="brutal-btn-accent hidden sm:block">
-              Shop Now
+              Visit Store
             </button>
             <button 
               className="md:hidden p-2"
@@ -110,10 +137,10 @@ export default function App() {
             className="absolute top-20 left-0 w-full bg-brand-charcoal border-b border-white/10 p-6 flex flex-col gap-6 md:hidden"
           >
             <a href="#categories" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">Categories</a>
-            <a href="#best-sellers" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">Shop</a>
+            <a href="#best-sellers" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">Visit Store</a>
             <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">About</a>
             <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold uppercase">Contact</a>
-            <button className="brutal-btn-accent w-full">Shop Now</button>
+            <button className="brutal-btn-accent w-full">Visit Store</button>
           </motion.div>
         )}
       </nav>
@@ -149,7 +176,7 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button className="brutal-btn-accent px-10 py-5 text-lg">
-                Shop Collection
+                Visit Store
               </button>
               <button className="brutal-btn px-10 py-5 text-lg">
                 Elevate Wardrobe
@@ -335,7 +362,6 @@ export default function App() {
                 </div>
                 <div className="p-6 border-t border-white/10">
                   <h4 className="text-lg font-bold mb-1 group-hover:text-brand-lime transition-colors">{product.name}</h4>
-                  <p className="font-mono text-brand-lime text-sm">{product.price}</p>
                 </div>
               </motion.div>
             ))}
@@ -358,20 +384,17 @@ export default function App() {
               </p>
               <div className="flex flex-wrap gap-8">
                 <div className="flex flex-col">
-                  <span className="text-4xl font-black">50K+</span>
                   <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest">Followers</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-4xl font-black">1.2M</span>
                   <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest">Likes</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-4xl font-black">10K</span>
                   <span className="font-mono text-[10px] text-white/40 uppercase tracking-widest">Mentions</span>
                 </div>
               </div>
               <a 
-                href="https://www.tiktok.com/@_jovipants" 
+                href="https://www.tiktok.com/_jovipants" 
                 target="_blank" 
                 rel="noreferrer"
                 className="brutal-btn mt-12 inline-flex items-center gap-3"
@@ -436,20 +459,43 @@ export default function App() {
 
             <div className="bg-brand-black p-10 border border-white/10">
               <h3 className="text-2xl font-bold mb-8 uppercase tracking-tighter">Order Now</h3>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleInquirySubmit}>
                 <div className="space-y-2">
                   <label className="font-mono text-[10px] text-white/40 uppercase tracking-widest">Full Name</label>
-                  <input type="text" className="w-full bg-transparent border-b border-white/20 py-3 focus:border-brand-lime outline-none transition-colors" placeholder="Enter your name" />
+                  <input 
+                    name="name"
+                    required
+                    type="text" 
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full bg-transparent border-b border-white/20 py-3 focus:border-brand-lime outline-none transition-colors" 
+                    placeholder="Enter your name" 
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="font-mono text-[10px] text-white/40 uppercase tracking-widest">Email Address</label>
-                  <input type="email" className="w-full bg-transparent border-b border-white/20 py-3 focus:border-brand-lime outline-none transition-colors" placeholder="Enter your email" />
+                  <input 
+                    name="email"
+                    required
+                    type="email" 
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full bg-transparent border-b border-white/20 py-3 focus:border-brand-lime outline-none transition-colors" 
+                    placeholder="Enter your email" 
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="font-mono text-[10px] text-white/40 uppercase tracking-widest">Message / Order Details</label>
-                  <textarea className="w-full bg-transparent border-b border-white/20 py-3 focus:border-brand-lime outline-none transition-colors h-32 resize-none" placeholder="What are you looking for?" />
+                  <textarea 
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="w-full bg-transparent border-b border-white/20 py-3 focus:border-brand-lime outline-none transition-colors h-32 resize-none" 
+                    placeholder="What are you looking for?" 
+                  />
                 </div>
-                <button className="brutal-btn-accent w-full py-5 text-lg">Send Inquiry</button>
+                <button type="submit" className="brutal-btn-accent w-full py-5 text-lg">Send Inquiry</button>
               </form>
             </div>
           </div>
@@ -461,14 +507,20 @@ export default function App() {
             </div>
 
             <div className="flex items-center gap-6">
-              <a href="https://www.tiktok.com/@_jovipants" className="text-white/40 hover:text-brand-lime transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-white/40 hover:text-brand-lime transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="text-white/40 hover:text-brand-lime transition-colors"><MessageSquare size={20} /></a>
+              <a href="https://www.tiktok.com/_jovipants" target="_blank" rel="noreferrer" className="text-white/40 hover:text-brand-lime transition-colors flex items-center gap-2">
+                <TikTokIcon size={20} />
+                <span className="font-mono text-[10px] uppercase tracking-widest">TikTok</span>
+              </a>
             </div>
 
-            <p className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
-              &copy; {new Date().getFullYear()} Jovi Pants. All rights reserved.
-            </p>
+            <div className="text-center md:text-right">
+              <p className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
+                &copy; {new Date().getFullYear()} Jovi Pants. All rights reserved.
+              </p>
+              <p className="font-mono text-[10px] text-white/40 uppercase tracking-widest mt-1">
+                Built by <a href="https://www.webdesignking.online" target="_blank" rel="noreferrer" className="text-white hover:text-brand-lime transition-colors">WDK</a>
+              </p>
+            </div>
           </div>
         </div>
       </footer>
