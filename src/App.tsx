@@ -35,11 +35,11 @@ import { useState, useRef } from "react";
 import React from "react";
 
 const CATEGORIES = [
-  { id: 'men', name: "Men's", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422976/IMG_0428_ckygjo.jpg" },
-  { id: 'women', name: "Women's", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422968/IMG_0176_vbj9db.jpg" },
-  { id: 'cargo', name: "Cargo", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422980/IMG_0594_xvkxub.jpg" },
-  { id: 'tailored', name: "Tailored", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422982/IMG_0624_mvibh3.jpg" },
-  { id: 'streetwear', name: "Streetwear", image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422983/IMG_9336_phgzng.jpg" },
+  { id: 'men', name: "Men's", image: "https://picsum.photos/seed/jovi-men/800/1000" },
+  { id: 'women', name: "Women's", image: "https://picsum.photos/seed/jovi-women/800/1000" },
+  { id: 'cargo', name: "Cargo", image: "https://picsum.photos/seed/jovi-cargo/800/1000" },
+  { id: 'tailored', name: "Tailored", image: "https://picsum.photos/seed/jovi-tailored/800/1000" },
+  { id: 'streetwear', name: "Streetwear", image: "https://picsum.photos/seed/jovi-street/800/1000" },
 ];
 
 const BEST_SELLERS = [
@@ -47,28 +47,28 @@ const BEST_SELLERS = [
     id: 1, 
     name: "Classic Cargo V1", 
     price: "₦25,000", 
-    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422974/IMG_0301_mb6mbj.jpg",
+    image: "https://picsum.photos/seed/pants1/600/800",
     tag: "Best Seller"
   },
   { 
     id: 2, 
     name: "Urban Street Joggers", 
     price: "₦18,500", 
-    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422970/IMG_0199_hqto58.jpg",
+    image: "https://picsum.photos/seed/pants2/600/800",
     tag: "Trending"
   },
   { 
     id: 3, 
     name: "Tailored Slim Trousers", 
     price: "₦30,000", 
-    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422970/IMG_0185_g9dozz.jpg",
+    image: "https://picsum.photos/seed/pants3/600/800",
     tag: "Premium"
   },
   { 
     id: 4, 
     name: "Utility Combat Pants", 
     price: "₦22,000", 
-    image: "https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422968/IMG_0181_kzddsu.jpg",
+    image: "https://picsum.photos/seed/pants4/600/800",
     tag: "Most Affordable"
   },
 ];
@@ -248,7 +248,7 @@ export default function App() {
               whileHover={{ scale: 0.98 }}
               className="md:col-span-8 h-[500px] relative overflow-hidden group border border-white/10"
             >
-              <img src={CATEGORIES[0].image} alt={CATEGORIES[0].name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
+              <img src={CATEGORIES[0].image} alt={CATEGORIES[0].name} className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
               <div className="absolute bottom-8 left-8">
                 <h3 className="text-4xl font-black mb-4">{CATEGORIES[0].name}</h3>
@@ -260,7 +260,7 @@ export default function App() {
               whileHover={{ scale: 0.98 }}
               className="md:col-span-4 h-[500px] relative overflow-hidden group border border-white/10"
             >
-              <img src={CATEGORIES[1].image} alt={CATEGORIES[1].name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
+              <img src={CATEGORIES[1].image} alt={CATEGORIES[1].name} className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
               <div className="absolute bottom-8 left-8">
                 <h3 className="text-4xl font-black mb-4">{CATEGORIES[1].name}</h3>
@@ -272,7 +272,7 @@ export default function App() {
               whileHover={{ scale: 0.98 }}
               className="md:col-span-4 h-[400px] relative overflow-hidden group border border-white/10"
             >
-              <img src={CATEGORIES[2].image} alt={CATEGORIES[2].name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
+              <img src={CATEGORIES[2].image} alt={CATEGORIES[2].name} className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
               <div className="absolute bottom-6 left-6">
                 <h3 className="text-2xl font-black mb-2">{CATEGORIES[2].name}</h3>
@@ -284,7 +284,7 @@ export default function App() {
               whileHover={{ scale: 0.98 }}
               className="md:col-span-4 h-[400px] relative overflow-hidden group border border-white/10"
             >
-              <img src={CATEGORIES[3].image} alt={CATEGORIES[3].name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
+              <img src={CATEGORIES[3].image} alt={CATEGORIES[3].name} className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
               <div className="absolute bottom-6 left-6">
                 <h3 className="text-2xl font-black mb-2">{CATEGORIES[3].name}</h3>
@@ -296,7 +296,7 @@ export default function App() {
               whileHover={{ scale: 0.98 }}
               className="md:col-span-4 h-[400px] relative overflow-hidden group border border-white/10"
             >
-              <img src={CATEGORIES[4].image} alt={CATEGORIES[4].name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
+              <img src={CATEGORIES[4].image} alt={CATEGORIES[4].name} className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
               <div className="absolute bottom-6 left-6">
                 <h3 className="text-2xl font-black mb-2">{CATEGORIES[4].name}</h3>
@@ -350,7 +350,7 @@ export default function App() {
                   <img 
                     src={product.image} 
                     alt={product.name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4 bg-brand-lime text-black px-3 py-1 text-[10px] font-bold uppercase tracking-tighter">
@@ -409,18 +409,18 @@ export default function App() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="aspect-[9/16] bg-brand-charcoal border border-white/10 overflow-hidden">
-                    <img src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422983/IMG_9447_f1xxo2.jpg" alt="TikTok 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="https://picsum.photos/seed/tiktok1/400/711" alt="TikTok 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                   <div className="aspect-square bg-brand-charcoal border border-white/10 overflow-hidden">
-                    <img src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422982/IMG_0696_j0z7oc.jpg" alt="TikTok 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="https://picsum.photos/seed/tiktok2/400/400" alt="TikTok 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                 </div>
                 <div className="space-y-4 pt-12">
                   <div className="aspect-square bg-brand-charcoal border border-white/10 overflow-hidden">
-                    <img src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422978/IMG_0554_tlyiap.jpg" alt="TikTok 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="https://picsum.photos/seed/tiktok3/400/400" alt="TikTok 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                   <div className="aspect-[9/16] bg-brand-charcoal border border-white/10 overflow-hidden">
-                    <img src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422976/IMG_0503_pq5rap.jpg" alt="TikTok 4" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="https://picsum.photos/seed/tiktok4/400/711" alt="TikTok 4" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
