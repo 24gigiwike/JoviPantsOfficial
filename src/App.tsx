@@ -409,18 +409,18 @@ export default function App() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="aspect-[9/16] bg-brand-charcoal border border-white/10 overflow-hidden">
-                    <img src="https://picsum.photos/seed/tiktok1/400/711" alt="TikTok 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422978/IMG_0529_sk5rj3.jpg" alt="TikTok 1" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                   <div className="aspect-square bg-brand-charcoal border border-white/10 overflow-hidden">
-                    <img src="https://picsum.photos/seed/tiktok2/400/400" alt="TikTok 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422974/IMG_0305_gmjas8.jpg" alt="TikTok 2" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                 </div>
                 <div className="space-y-4 pt-12">
                   <div className="aspect-square bg-brand-charcoal border border-white/10 overflow-hidden">
-                    <img src="https://picsum.photos/seed/tiktok3/400/400" alt="TikTok 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422973/IMG_0299_apwwk6.jpg" alt="TikTok 3" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                   <div className="aspect-[9/16] bg-brand-charcoal border border-white/10 overflow-hidden">
-                    <img src="https://picsum.photos/seed/tiktok4/400/711" alt="TikTok 4" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776422968/IMG_0167_uewk5v.jpg" alt="TikTok 4" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
