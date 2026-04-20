@@ -103,8 +103,12 @@ export default function App() {
       <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-brand-black/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-white flex items-center justify-center font-bold text-black text-xl tracking-tighter group-hover:bg-brand-lime transition-colors">
-              JP
+            <div className="w-10 h-10 bg-white flex items-center justify-center overflow-hidden transition-colors group-hover:bg-brand-lime">
+              <img 
+                src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776672652/jovilogo_keaibd.jpg" 
+                alt="Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="font-bold text-2xl tracking-tighter uppercase hidden sm:block">Jovi Pants</span>
           </a>
@@ -151,12 +155,15 @@ export default function App() {
           style={{ opacity, scale }}
           className="absolute inset-0 z-0"
         >
-          <img 
-            src="https://picsum.photos/seed/jovi-hero/1920/1080" 
-            alt="Hero" 
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
             className="w-full h-full object-cover opacity-40 grayscale hover:grayscale-0 transition-all duration-1000"
-            referrerPolicy="no-referrer"
-          />
+          >
+            <source src="https://res.cloudinary.com/dtkluxukm/video/upload/q_auto/f_auto/v1776672652/Video_from_Web_Design_King_igktmb.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent" />
         </motion.div>
 
@@ -502,7 +509,13 @@ export default function App() {
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-12 border-t border-white/5">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-white flex items-center justify-center font-bold text-black text-sm tracking-tighter">JP</div>
+              <div className="w-8 h-8 bg-white flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://picsum.photos/seed/jovipants-logo/100/100" 
+                  alt="Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <span className="font-bold text-xl tracking-tighter uppercase">Jovi Pants</span>
             </div>
 
