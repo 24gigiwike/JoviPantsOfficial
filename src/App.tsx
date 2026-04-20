@@ -511,7 +511,7 @@ export default function App() {
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-white flex items-center justify-center overflow-hidden">
                 <img 
-                  src="https://picsum.photos/seed/jovipants-logo/100/100" 
+                  src="https://res.cloudinary.com/dtkluxukm/image/upload/q_auto/f_auto/v1776672652/jovilogo_keaibd.jpg" 
                   alt="Logo" 
                   className="w-full h-full object-cover"
                 />
